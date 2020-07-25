@@ -1,5 +1,7 @@
-<h2>Add Item to Cart</h2>
-<%= form_tag('/products') do %>
-    <%= text_field_tag "product" %>
-    <%= submit_tag "add to cart" %>
-<% end %>
+<h1>Your Cart</h1>
+
+<ul>
+    <% session[:cart].each do |item| %>
+        <li><%= item %></li><br>
+    <% end %>
+</ul>
